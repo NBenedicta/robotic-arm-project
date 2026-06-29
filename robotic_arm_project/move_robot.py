@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from robotic_arm_project.pick_and_place import PickAndPlacePipeline
 import os
 import rclpy
 from rclpy.node import Node
@@ -25,8 +26,8 @@ def main(args=None):
 
     node = RobotController()
 
-    node.robot.plan_to_xyz(0.35, 0.20, 0.45, "Point A")
-    node.robot.plan_to_xyz(0.45, -0.20, 0.35, "Point B")
+    pipeline = PickAndPlacePipeline(node.robot)
+    pipeline.run_demo()
     node.get_logger().info("Motion test complete.")
 
     os._exit(0)
