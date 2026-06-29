@@ -90,6 +90,8 @@ class RobotAPI:
 
         if plan_result:
             print(f"Plan successful to {label}.")
+            print("Executing trajectory...")
+
             print("Trajectory planned and displayed in RViz.")
         else:
             print(f"Planning failed to {label}.")
