@@ -1,0 +1,16 @@
+build/
+install/
+log/
+
+*.pyc
+__pycache__/
+
+.vscode/
+.cursor/
+
+.DS_Store
+
+*.bag
+*.db3
+
+*.log
