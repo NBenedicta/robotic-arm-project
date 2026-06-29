@@ -43,6 +43,9 @@ This repository is being developed as a professional robotics portfolio project.
 
 (Add screenshot here.)
 
+### Pick-and-Place Planning Pipeline
+
+![Pick and Place Pipeline](images/pick_and_place_pipeline.png)
 ---
 
 ## Current Progress
@@ -64,6 +67,8 @@ This repository is being developed as a professional robotics portfolio project.
 * Gazebo simulation
 * Camera integration
 * Object detection
+* Pick-and-place planning pipeline
+* Multi-step robotic motion sequence
 
 ---
 
