@@ -1,7 +1,7 @@
 from geometry_msgs.msg import PoseStamped
 from moveit.planning import MoveItPy
 from moveit_configs_utils import MoveItConfigsBuilder
-
+import time
 
 class RobotAPI:
 
@@ -64,6 +64,7 @@ class RobotAPI:
             print("Executing trajectory...")
             self.panda.execute(plan_result.trajectory, controllers=["panda_arm_controller"])
             print("Execution complete.")
+            time.sleep(1.0)
         else:
             print(f"Planning failed: {start_name} -> {goal_name}")
 
@@ -95,5 +96,6 @@ class RobotAPI:
             print("Executing trajectory...")
             self.panda.execute(plan_result.trajectory, controllers=["panda_arm_controller"])
             print("Execution complete.")
+            time.sleep(1.0)
         else:
             print(f"Planning failed to {label}.")
