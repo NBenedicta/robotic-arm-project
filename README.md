@@ -41,25 +41,26 @@ This repository is being developed as a professional robotics portfolio project.
 
 ### Motion Planning
 
-(Add screenshot here.)
+![Robot Loaded](pick_and_place_pipeline.png)
 
 ### Pick-and-Place Planning Pipeline
 
 ![Pick and Place Pipeline](images/pick_and_place_pipeline.png)
 ---
 
-## Current Progress
+## Demo Video
+
+The demo shows the Panda robotic arm moving from Point A to Point B using ROS2, MoveIt2, inverse kinematics, and RViz.
+
+[Download Demo Video](videos/point_a_to_point_b_demo.mp4)
+
+## Current Produtions
 
 * Motion planning with MoveItPy
 * Cartesian goal planning
 * Named configuration planning
 * RViz visualization
 * Modular project structure
-
----
-
-## Future Work
-
 * Scene management
 * Collision objects
 * Pick-and-place
