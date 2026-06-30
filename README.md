@@ -6,8 +6,6 @@ This project demonstrates robotic motion planning using ROS2 Jazzy, MoveIt2, and
 
 The project provides a modular Python API for robotic manipulation and currently supports motion planning to named robot configurations and Cartesian target positions.
 
-This repository is being developed as a professional robotics portfolio project.
-
 ---
 
 ## Technologies
@@ -52,7 +50,7 @@ This repository is being developed as a professional robotics portfolio project.
 
 The demo shows the Panda robotic arm moving from Point A to Point B using ROS2, MoveIt2, inverse kinematics, and RViz.
 
-[Download Demo Video](videos/point_a_to_point_b_demo.mp4)
+![Robot Arm Demo](videos/point_a_to_point_b_demo.gif)
 
 ## Current Produtions
 
