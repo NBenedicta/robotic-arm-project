@@ -61,7 +61,9 @@ class RobotAPI:
 
         if plan_result:
             print(f"Plan successful: {start_name} -> {goal_name}")
-            print("Trajectory planned and displayed in RViz.")
+            print("Executing trajectory...")
+            self.panda.execute(plan_result.trajectory, controllers=["panda_arm_controller"])
+            print("Execution complete.")
         else:
             print(f"Planning failed: {start_name} -> {goal_name}")
 
@@ -80,7 +82,7 @@ class RobotAPI:
         target_pose.pose.orientation.z = 0.0
         target_pose.pose.orientation.w = 0.0
 
-        self.arm.set_start_state(configuration_name="ready")
+        self.arm.set_start_state_to_current_state()
         self.arm.set_goal_state(
             pose_stamped_msg=target_pose,
             pose_link="panda_hand"
@@ -91,7 +93,7 @@ class RobotAPI:
         if plan_result:
             print(f"Plan successful to {label}.")
             print("Executing trajectory...")
-
-            print("Trajectory planned and displayed in RViz.")
+            self.panda.execute(plan_result.trajectory, controllers=["panda_arm_controller"])
+            print("Execution complete.")
         else:
             print(f"Planning failed to {label}.")
